@@ -10,6 +10,7 @@ on:
       - 'astro.config.mjs'
       - 'package.json'
       - 'package-lock.json'
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -17,25 +18,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20'
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Build Astro project
-      run: npm run build
+      - name: Build Astro project
+        run: npm run build
 
-    - name: Upload to FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
-      with:
-        ftp-server: ftp://server1.shared.spaceship.host
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./dist
-        #git-ftp-args: --insecure
+      - name: Upload to FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          ftp-server: ftp://server1.shared.spaceship.host
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist
+          #git-ftp-args: --insecure
