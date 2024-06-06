@@ -11,8 +11,6 @@ This site is built using [Astro](https://astro.build/), and [TypeScript](https:/
 - **Responsive Design**: Optimized for various screen sizes and devices.
 - **Projects Showcase**: Highlights my key projects with detailed descriptions and links to the repositories.
 - **Blog**: Includes articles on web development, programming, and other topics of interest.
-- **Contact Form**: Allows visitors to get in touch with me directly through the site.
-- **Dynamic Content**: Utilizes Nuxt's server-side rendering and API integration for a dynamic and fast user experience.
 
 ## Technologies Used
 
