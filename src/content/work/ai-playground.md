@@ -2,7 +2,7 @@
 title: AI Playground
 publishDate: 2025-10-19
 img: /assets/ai-playground-screenshot.png
-img_alt: Soft pink and baby blue water ripples together in a subtle texture.
+img_alt: AI Playground UI screenshot showing Provider, Model, and Temperature settings
 description: |
   A Full-Stack, Cloud-Native Showcase of AI Integration and Decoupled Architecture
 tags:
